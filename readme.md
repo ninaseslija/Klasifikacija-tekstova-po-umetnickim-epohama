@@ -75,7 +75,31 @@ parametri:
 'max_features' : [50, 100, 140, 180, 220, 300],  
 'max_depth' : [30, 40, 50, 60, 70, 80]
 
+iteracija 5:
+definitivno najbolje rezultate daje 50-100 max_features, tako da idemo u tom smeru
+sto vise drveca i dubine, model postaje bolji
+parametri: 
+#'max_features' : [50, 80, 100], 
+#'max_depth' : [80, 90, 100, 110, 120]
+#'n_estimators' : [ 200, 250, 300], # broj drveca
 
--uraditi grafik greske 
--dodati jos dubine dok ne postane losije 
--max_features da bude 50 i 100 -> uraditi cross validation
+
+iteracija 6:
+50 daje najvise rezultate 
+'n_estimators' : [400, 500, 600], # broj drveca
+'max_features' : [30, 50], 
+'max_depth' : [150, 200, None]
+max_depth teramo do kraja 
+
+?pitanje - da li broj feautera manji od 50 daju bolje rezultate?
+-> daju! 
+
+iteracija 7:
+n_estimators' : [400, 500, 600]
+'max_features' : [10, 20, 30], 
+'max_depth' : [150, 200, None]
+
+
+
+
+-dodati jos dubine i stabla dok ne postane losije 
